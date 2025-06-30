@@ -30,7 +30,7 @@ function App() {
     dataString = dataString.split("* ");
     dataString = dataString.map((item) => item.trim());
 
-    console.log(dataString);
+    // console.log(dataString);
     setResult(dataString);
   };
 
@@ -39,14 +39,14 @@ function App() {
       <div className="col-span-1 bg-zinc-800"></div>
       <div className="col-span-4 p-10">
         <div className="container h-140 overflow-scroll">
-          <div className="text-white">
+          <div className="text-zinc-300">
             <ul>
               {/* {result} */}
               {result &&
                 result.map((item, index) => {
                   return (
-                    <li className="text-left p-1">
-                      <Answer ans={item} key={index} />
+                    <li key={index} className="text-left p-1">
+                      <Answer ans={item} index={index} />
                     </li>
                   );
                 })}
