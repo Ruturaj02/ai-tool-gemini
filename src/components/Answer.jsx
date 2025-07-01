@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { checkHeading, replaceHeadingStarts } from "../helper";
 
 const Answer = ({ ans,totalResult, index }) => {
-  console.log(index);
+  // console.log(index);
   const [heading, setHeading] = useState(false);
   const [answer, setAnswer] = useState(ans);
 

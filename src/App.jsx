@@ -5,7 +5,7 @@ import Answer from "./components/Answer";
 
 function App() {
   const [question, setQuestion] = useState("");
-  const [result, setResult] = useState(undefined);
+  const [result, setResult] = useState([]);
 
   const payload = {
     contents: [
@@ -31,8 +31,13 @@ function App() {
     dataString = dataString.map((item) => item.trim());
 
     // console.log(dataString);
-    setResult(dataString);
+    setResult([
+      ...result,
+      { type: "q", text: question },
+      { type: "a", text: dataString },
+    ]);
   };
+  // console.log(result);
 
   return (
     <div className="grid grid-cols-5 h-screen text-center">
@@ -41,15 +46,14 @@ function App() {
         <div className="container h-140 overflow-scroll">
           <div className="text-zinc-300">
             <ul>
-              {/* {result} */}
-              {result &&
-                result.map((item, index) => {
-                  return (
-                    <li key={index} className="text-left p-1">
-                      <Answer ans={item} index={index} />
-                    </li>
-                  );
-                })}
+              {
+                result.map((item,index)=>(
+                  item.type=="q" ?  <li key={index+Math.random()} className="text-left p-1"><Answer ans={item.text} totalResult={1} index={index}/></li> :
+                  item.text.map((ansItem,ansIndex)=>(
+                    <li key={ansIndex+Math.random()} className="text-left p-1"><Answer ans={ansItem} totalResult={item.length} index={ansIndex}/></li>
+                  ))
+                )) 
+              }
             </ul>
           </div>
         </div>
