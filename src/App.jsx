@@ -22,6 +22,10 @@ function App() {
 
   const askQuestion = async () => {
 
+    if(!question){
+      return false;
+    }
+
     if (localStorage.getItem('history')) {
       let history = JSON.parse(localStorage.getItem("history"));
       history = [question, ...history];
@@ -48,6 +52,7 @@ function App() {
       { type: "q", text: question },
       { type: "a", text: dataString },
     ]);
+    setQuestion("");
   };
   // console.log(recentHistory);
 
@@ -55,6 +60,14 @@ function App() {
   const clearHistory = () => {
     localStorage.clear();
     setRecentHistory([]);
+  }
+
+
+  const isEnter = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      askQuestion();
+    }
   }
 
   return (
@@ -116,6 +129,7 @@ function App() {
         <div className="bg-zinc-800 w-1/2 text-white m-auto rounded-4xl border border-zinc-700 flex h-16 p-1 pr-5">
           <input
             type="text"
+            onKeyDown={isEnter}
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             className="w-full h-full p-3 outline-none"
