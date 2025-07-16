@@ -18,9 +18,9 @@ const Answer = ({ ans,totalResult, index ,type}) => {
   return (
     <>
       {index==0 && totalResult > 1? (
-        <span className="pt-2 text-lg block text-white">{answer}</span>
+        <span className="pt-2 text-lg block dark:text-white text-zinc-800">{answer}</span>
       ) : heading ? (
-        <span className="pt-2 text-lg block text-white">{answer}</span>
+        <span className="pt-2 text-lg block dark:text-white text-zinc-800">{answer}</span>
       ) : (
         <span className={type=="q" ? 'pl-1' : 'pl-5'}>{answer}</span>
       )}

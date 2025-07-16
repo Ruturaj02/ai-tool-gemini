@@ -5,8 +5,8 @@ const RecentSearch = ({recentHistory,setRecentHistory,setSelectedHistory}) => {
   };
   return (
     <>
-      <div className="col-span-1 bg-zinc-800 pt-3">
-        <h1 className="text-xl text-white flex justify-center items-center">
+      <div className="col-span-1 dark:bg-zinc-800 bg-red-100 pt-3">
+        <h1 className="text-xl dark:text-white text-zinc-800 flex justify-center items-center">
           <span>Recent Search</span>
           <button onClick={clearHistory} className="cursor-pointer">
             <svg
@@ -25,10 +25,10 @@ const RecentSearch = ({recentHistory,setRecentHistory,setSelectedHistory}) => {
             recentHistory.map((item,i) => (
               <li key={i}
                 onClick={() => setSelectedHistory(item)}
-                className="pl-5 px-5 truncate text-zinc-400 cursor-pointer hover:bg-zinc-700 hover:text-zinc-200"
+                className="pl-5 px-5 truncate dark:text-zinc-400 text-zinc-700 cursor-pointer dark:hover:bg-zinc-700 dark:hover:text-zinc-200 hover:bg-red-200 hover:text-zinc-800"
               >
-                {" "}
-                {item}{" "}
+                {item}
+                
               </li>
             ))}
         </ul>
