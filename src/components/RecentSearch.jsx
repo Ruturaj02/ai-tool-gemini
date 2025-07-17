@@ -22,7 +22,7 @@ const RecentSearch = ({recentHistory,setRecentHistory,setSelectedHistory}) => {
       <div className="col-span-1 dark:bg-zinc-800 bg-red-100 pt-3">
         <h1 className="text-xl dark:text-white text-zinc-800 flex justify-center items-center">
           <span>Recent Search</span>
-          <button onClick={clearHistory} className="cursor-pointer">
+          <button onClick={clearHistory} className="cursor-pointer bg-zinc-700 hover:bg-zinc-900 mx-1 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="20px"
