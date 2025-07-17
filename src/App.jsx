@@ -23,7 +23,14 @@ function App() {
     if (question) {
       if (localStorage.getItem("history")) {
         let history = JSON.parse(localStorage.getItem("history"));
+        //limited items in history
+        history  = history.slice(0, 19);
         history = [question, ...history];
+         //check case sensetive of history
+        history = history.map((item)=>item.charAt(0).toUpperCase() + item.slice(1).trim());
+        //duplicate remove
+        history = [...new Set(history)];
+     
         localStorage.setItem("history", JSON.stringify(history));
         setRecentHistory(history);
       } else {
