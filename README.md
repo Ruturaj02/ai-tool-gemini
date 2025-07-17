@@ -1,12 +1,45 @@
-# React + Vite
+🔮 Gemini AI Clone
+A sleek and responsive Gemini AI Clone built using React.js and Tailwind CSS, replicating the look and feel of Google’s Gemini AI interface. Designed to provide an intuitive chat UI with modern styling and component-based architecture.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+🚀 Features
+⚛️ Built with React for fast, interactive UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💨 Styled using Tailwind CSS for utility-first, responsive design
 
-## Expanding the ESLint configuration
+🌓 Light/Dark mode toggle (optional)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📱 Fully responsive across devices
+
+🧠 Clean UI mimicking Gemini's conversational layout
+
+✨ Component-based, reusable code structure
+
+📸 Demo
+Live:https://ai-tool-gemini.vercel.app/
+
+
+
+
+<img width="1881" height="915" alt="gemini-clone-01" src="https://github.com/user-attachments/assets/41d8848d-b556-42b4-b0dd-9038d5f45609" />
+<img width="1887" height="910" alt="gemini-clone-02" src="https://github.com/user-attachments/assets/9b6e1da3-368d-40d7-a07c-f145580b418b" />
+
+
+📦 Tech Stack
+Frontend: React, Tailwind CSS
+State Management: useState, useEffect ,useRef
+Routing: React Router
+Icons: React Icons / Heroicons 
+Hosting: Vercel 
+
+
+🛠️ Installation
+git clone https://github.com/Ruturaj02/ai-tool-gemini.git
+cd ai-tool-gemini
+npm install
+npm start
+
+
+💡 Inspiration
+This project is inspired by Google Gemini's AI interface — built as a frontend challenge to replicate its design using modern React practices and Tailwind utilities.
+
